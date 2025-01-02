@@ -13,7 +13,22 @@ You need to specify the OpenAI API key as shown below.
 export OPENAI_API_KEY="FIXME"
 ```
 
-You may run it using Docker as follows:
+You may run this app without making a local copy first (i.e. clone the repo)
+using Docker as follows:
+
+```shell
+docker run --rm \
+  -p "0.0.0.0:8080:8080" \
+  -v $PWD:/agentlang \
+  -e OPENAI_API_KEY="$OPENAI_API_KEY" \
+  -it agentlang/agentlang.cli:latest \
+  agent clonerun https://github.com/agentlang-hub/joke.git
+```
+
+### Running a local copy of the app
+
+If you have cloned the app and made a local copy on your computer,
+you may run it using Docker as follows:
 
 ```shell
 docker run --rm \
@@ -24,7 +39,8 @@ docker run --rm \
   agent run
 ```
 
-Alternatively, instead of Docker you may use the locally installed Agentlang CLI:
+Alternatively, instead of Docker you may use the locally installed
+[Agentlang CLI](https://github.com/agentlang-ai/agentlang.cli):
 
 ```shell
 agent run
