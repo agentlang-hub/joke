@@ -4,8 +4,8 @@ This app makes jokes based on the provided context.
 
 ## Usage
 
-You need a Unix-compatible (macOS, Linux or Unix emulator in Windows) system
-to run this app. Open a terminal and execute the steps below:
+You need a Unix-compatible (macOS, Linux or Windows [WSL](https://learn.microsoft.com/en-us/windows/wsl/install))
+system to run this app. Open a terminal and execute the steps below:
 
 You need to specify the OpenAI API key as shown below.
 
